@@ -1,13 +1,7 @@
 #include<iostream>
 #include<algorithm>
 using namespace std;
-struct node{
-    char pname;
-    int btime;
-    int atime;
-    int restime=0;
-    int ctime=0;
-    int wtime=0;
+
 }a[1000],b[1000],c[1000];
 void insert(int n){
     int i;
