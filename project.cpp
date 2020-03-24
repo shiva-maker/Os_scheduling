@@ -26,44 +26,12 @@ bool btimeOppSort(node a,node b){
         return a.btime > b.btime; 
     return a.atime < b.atime;
 }
-bool atimeSort(node a,node b){
-    return a.atime < b.atime; 
+int main(){
+    int nop,choice,i,qt;
+    cout<<"Enter number of processes\n";
+    cin>>nop;
+    cout<<"Enter process, AT, BT\n";
+    insert(nop);
+    disp(nop,1);
+    return 0;
 }
-int k=0,f=0,r=0;
-void disp(int nop,int qt){
-    int n=nop,q;
-    sort(a,a+n,atimeSort);
-    int ttime=0,i;
-    int j,tArray[n];
-    int alltime=0;
-    bool moveLast=false;
-    for(i=0;i<n;i++){
-        alltime+=a[i].btime;
-  //      cout<<"start is "<<a[i].pname<<" to "<<ttime<<"\n";
-    }
-    alltime+=a[0].atime;
-    for(i=0;ttime<=alltime;){
-        j=i;
-        while(a[j].atime<=ttime&&j!=n){
-     //       cout<<"less than atime is "<<a[j].pname<<" to "<<ttime<<"\n";
-            b[r]=a[j];
-            j++;
-            r++;
-        }
-        if(r==f){
-            c[k].pname='i';
-            c[k].btime=a[j].atime-ttime;
-            c[k].atime=ttime;
-            ttime+=c[k].btime;
-            k++;
-            continue;
-        }
-        i=j;
-        if(moveLast==true){
-     //       cout<<"moving "<<b[f].pname<<" to "<<r<<"\n";
-             sort(b+f,b+r,btimeOppSort);    
-            // b[r]=b[f];
-            // f++;
-            // r++;
-        }
-       
