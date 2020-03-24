@@ -1,11 +1,4 @@
-#include<iostream>
-#include<algorithm>
-using namespace std;
 
-}a[1000],b[1000],c[1000];
-void insert(int n){
-    int i;
-    for(i=0;i<n;i++){
         cin>>a[i].pname;
         cin>>a[i].atime;
         cin>>a[i].btime;
